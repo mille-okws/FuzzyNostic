@@ -1,0 +1,73 @@
+# 💡 Sistema Especialista com Lógica Fuzzy para Diagnóstico de Doenças Respiratórias
+
+Este projeto implementa um sistema especialista usando **lógica fuzzy** para ajudar na identificação de possíveis doenças respiratórias com base nos sintomas informados pelo usuário. A interface gráfica é desenvolvida com `Tkinter`, e o sistema de inferência fuzzy é baseado na biblioteca `scikit-fuzzy`.
+
+## 🩺 Doenças Consideradas
+
+O sistema realiza avaliações com base nos seguintes diagnósticos possíveis:
+
+- Gripe  
+- Resfriado  
+- Bronquite  
+- Pneumonia  
+- Asma  
+- Sinusite  
+- Rinite  
+
+## 🧠 Sintomas Avaliados
+
+O modelo fuzzy considera os seguintes sintomas, com valores de intensidade de **0 a 5**:
+
+- Febre  
+- Tosse  
+- Dor de garganta  
+- Dor no peito  
+- Falta de ar  
+- Coriza  
+- Espirros  
+- Fadiga  
+- Dor de cabeça  
+
+## ⚙️ Tecnologias Utilizadas
+
+- [Python 3.x](https://www.python.org/)
+- [Tkinter](https://docs.python.org/3/library/tkinter.html) — Interface gráfica
+- [NumPy](https://numpy.org/)
+- [scikit-fuzzy](https://github.com/scikit-fuzzy/scikit-fuzzy) — Lógica fuzzy
+
+## 🚀 Como Executar
+
+1. **Clone o repositório:**
+
+```bash
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
+```
+
+2. **Instale as dependências:**
+
+```bash
+pip install numpy scikit-fuzzy
+```
+
+3. **Execute o programa:**
+
+```bash
+python seu_arquivo.py
+```
+
+> 💡 Certifique-se de ter o Python instalado e configurado no seu sistema.
+
+## 🧩 Estrutura do Código
+
+- O sistema define domínios fuzzy para cada sintoma (0 a 5).
+- Para cada doença, funções de pertinência são definidas em relação a cada sintoma.
+- A função `get_memberships` calcula os graus de pertinência fuzzy de acordo com os sintomas informados.
+- Os resultados podem ser usados para construir uma inferência ou indicar qual doença tem maior compatibilidade com os sintomas.
+
+## 🛠️ Melhorias Futuras
+
+- Adicionar regras de inferência fuzzy completas.
+- Implementar a interface gráfica completa com campos de entrada e botão de diagnóstico.
+- Gerar relatório visual dos graus de pertinência.
+- Tradução para inglês ou suporte multilíngue.
