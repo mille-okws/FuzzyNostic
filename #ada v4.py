@@ -24,7 +24,7 @@ def get_memberships(febre, tosse, garganta, peito, ar=0, coriza=0, espirros=0, f
     febre_vals = {
         'gripe':       fuzz.interp_membership(x_febre, fuzz.trapmf(x_febre, [0, 2.5, 3, 5.5]), febre),
         'resfriado':  fuzz.interp_membership(x_febre, fuzz.trapmf(x_febre, [0, 0, 2, 4]), febre),
-        'bronquite':  fuzz.interp_membership(x_febre, fuzz.trapmf(x_febre, [-0.5, 1,3, 5]), febre),
+        'bronquite':  fuzz.interp_membership(x_febre, fuzz.trapmf(x_febre, [-0.5, 1,3, 5.5]), febre),
         'pneumonia':  fuzz.interp_membership(x_febre, fuzz.trapmf(x_ar, [2.5, 4, 5,5]), febre),
         'asma':        fuzz.interp_membership(x_febre, fuzz.trimf(x_febre, [0, 0, 3]), febre),
         'sinusite':   fuzz.interp_membership(x_febre, fuzz.trimf(x_febre, [0, 0, 3]), febre),
@@ -46,7 +46,7 @@ def get_memberships(febre, tosse, garganta, peito, ar=0, coriza=0, espirros=0, f
     garganta_vals = {
         'gripe':       fuzz.interp_membership(x_garganta, fuzz.trapmf(x_garganta, [0, 2, 3, 5]), garganta),
         'resfriado':  fuzz.interp_membership(x_garganta, fuzz.trapmf(x_garganta, [-1, 1, 2, 4]), garganta),
-        'bronquite':  fuzz.interp_membership(x_garganta, fuzz.trapmf(x_garganta, [0, 2, 3, 4]), garganta),
+        'bronquite':  fuzz.interp_membership(x_garganta, fuzz.trapmf(x_garganta, [0, 0, 2, 4]), garganta),
         'pneumonia':  fuzz.interp_membership(x_garganta, fuzz.trapmf(x_garganta, [0, 0, 2, 4]), garganta),
         'asma':        fuzz.interp_membership(x_garganta, fuzz.trimf(x_garganta, [0, 0, 0]), garganta),
         'sinusite':   fuzz.interp_membership(x_garganta, fuzz.trimf(x_garganta, [0, 0, 1.5]), garganta),
@@ -93,7 +93,7 @@ def get_memberships(febre, tosse, garganta, peito, ar=0, coriza=0, espirros=0, f
         'bronquite':  fuzz.interp_membership(x_espirros, fuzz.trimf(x_espirros, [0, 0, 0]), espirros),
         'pneumonia':  fuzz.interp_membership(x_espirros, fuzz.trimf(x_espirros, [0, 0, 0]), espirros),
         'asma':        fuzz.interp_membership(x_espirros, fuzz.trimf(x_espirros, [0, 0, 0]), espirros),
-        'sinusite':   fuzz.interp_membership(x_espirros, fuzz.trapmf(x_espirros, [0, 0, 1, 4]), espirros),
+        'sinusite':   fuzz.interp_membership(x_espirros, fuzz.trapmf(x_espirros, [0, 0, 1, 3]), espirros),
         'rinite':     fuzz.interp_membership(x_espirros, fuzz.trapmf(x_espirros, [1, 3,5, 5]), espirros),
     }
 
